@@ -40,7 +40,7 @@ else:
 
 data_for_norm=[[age, prod, active_n, sex_n, balance, countries_n, tenure_age, mem_no_prod,cred_bal_sal, bal_sal]]
 data_norm = scaler.transform(data_for_norm)
-data = [[data_norm[0][4], data_norm[0][0], data_norm[0][1], data_norm[0][3],data_norm[0][5]]]
+data = [[data_norm[0][0], data_norm[0][1], data_norm[0][2], data_norm[0][3],data_norm[0][4]],data_norm[0][5],data_norm[0][6],data_norm[0][7],data_norm[0][8]]
 
 if st.button("Predicción"):
     prediction = str(round(model.predict(data)[0]))
