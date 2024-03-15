@@ -42,6 +42,6 @@ data_norm = scaler.transform(data_for_norm)
 data = [[data_norm[0][0], data_norm[0][1], data_norm[0][2], data_norm[0][3],data_norm[0][4]],data_norm[0][5],data_norm[0][6],data_norm[0][7],data_norm[0][8]]
 
 if st.button("Predicción"):
-    prediction = str(round(model.predict(data)[0]))
+    prediction = 'BAJA' if round(model.predict(data_norm)[0]) == 0 else 'ALTA' 
     
-    st.write("¿El clinete tiene probabilidad de abandono?:", prediction)
+    st.write("¿El cliente tiene probabilidad de abandono?:", prediction)
