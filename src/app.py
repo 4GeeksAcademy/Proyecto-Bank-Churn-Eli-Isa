@@ -20,7 +20,7 @@ countries = st.selectbox("Pais", options=["Francia","Alemania", "España"])
 #Mem-no-products= active*prod
 #Cred-Bal-Sal=cred*balance/sal
 cred= st.slider("Credito score", min_value = 400.0, max_value = 900.0, step = 5.0)
-sal=st.slider("Salario estimado", min_value = 0.0, max_value = 200000.0, step = 2500.0)
+sal=st.slider("Salario estimado", min_value = 10.0, max_value = 200000.0, step = 2500.0)
 tenure = st.slider("Antigüedad", min_value = 0.0, max_value = 10.0, step = 1.0)
 
 active_n = 0 if active == 'No' else 1
