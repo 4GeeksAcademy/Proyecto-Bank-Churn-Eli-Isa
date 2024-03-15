@@ -26,7 +26,7 @@ tenure = st.slider("Antigüedad", min_value = 0.0, max_value = 10.0, step = 1.0)
 active_n = 0 if active == 'No' else 1
 sex_n= 0 if sex== 'Mujer' else 1
 tenure_age=tenure/age
-mem_no_prod=active*prod
+mem_no_prod=active_n*prod
 cred_bal_sal=cred*balance/sal
 bal_sal=balance/sal
 
