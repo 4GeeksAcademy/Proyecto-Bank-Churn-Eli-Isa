@@ -1,3 +1,4 @@
+import streamlit as st
 import os
 import importlib.util
 
@@ -18,8 +19,10 @@ for nombre_archivo in nombres_archivos:
     spec.loader.exec_module(modulo)
     
     # Agregar la función "mostrar" del módulo al diccionario de páginas
-    #paginas[nombre_archivo] = modulo.mostrar
+    paginas[nombre_archivo] = modulo.mostrar
 
 # Ahora puedes acceder a las funciones de cada página
 # por ejemplo, para mostrar la página "Contexto":
-paginas[nombres_archivos[0]]()
+for nombre_pagina, funcion_mostrar in paginas.items():
+    st.title(nombre_pagina.replace("_", " "))  # Reemplazar "_" con espacio para mostrar el título de la página
+    funcion_mostrar()  # Llamar a la función mostrar de la página
