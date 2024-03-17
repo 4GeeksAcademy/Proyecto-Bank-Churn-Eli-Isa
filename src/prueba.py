@@ -1,28 +1,33 @@
 import streamlit as st
-import os
-import importlib.util
-
-# Obtener la lista de nombres de archivos en la carpeta "pages"
-nombres_archivos = [nombre_archivo[:-3] for nombre_archivo in os.listdir("pages") if nombre_archivo.endswith(".py")]
-
-# Diccionario para almacenar las funciones de cada página
-paginas = {}
-
-# Iterar sobre los nombres de los archivos y cargar los módulos
-for nombre_archivo in nombres_archivos:
-    # Construir la ruta al archivo
-    ruta_archivo = os.path.join("pages", f"{nombre_archivo}.py")
-    
-    # Cargar el módulo utilizando importlib
-    spec = importlib.util.spec_from_file_location(nombre_archivo, ruta_archivo)
-    modulo = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(modulo)
-    
-    # Agregar la función "mostrar" del módulo al diccionario de páginas
-    paginas[nombre_archivo] = modulo.mostrar
-
-# Ahora puedes acceder a las funciones de cada página
-# por ejemplo, para mostrar la página "Contexto":
-for nombre_pagina in nombres_archivos:
-    st.title(nombre_pagina.replace("_", " "))  # Reemplazar "_" con espacio para mostrar el título de la página
-    paginas[nombre_pagina]()  # Llamar a la función mostrar de la página
+# Lista de diapositivas
+slides = [
+    {"title": "Contexto", 
+     "content": [
+        st.markdown("<h1 style='text-align: center;'>BANK CHURN PREDICTION </h1>", unsafe_allow_html=True),
+        st.markdown("<h1 style='text-align: center;'>Elisa Castro</h1>", unsafe_allow_html=True),
+        st.markdown("<h1 style='text-align: center;'>Isabel Estévez</h1>", unsafe_allow_html=True),
+        st.markdown("<br>", unsafe_allow_html=True)
+    ]},
+    {"title": "Variables significativas", "content": "Contenido de la Diapositiva 2"},
+    {"title": "Diapositiva 3", "content": "Contenido de la Diapositiva 3"}
+    ]
+# Imagen que deseas mostrar en la diapositiva
+imagen_2 = "DATA-SCIENCE-Y-MACHINE-LEARNING.jpg/4209212d84e0d7a26f3b308b9960360a-2.jpg"
+# Índice de la diapositiva actual
+slide_index = st.session_state.get("slide_index", 0)
+# Mostrar la diapositiva actual
+st.title(slides[slide_index]["title"])
+# Mostrar la imagen en la primera diapositiva
+if slide_index == 0:
+    st.image(imagen_2, caption="Variables significativas")
+# Mostrar el contenido de la diapositiva
+st.write(slides[slide_index]["content"])
+# Botón con flecha hacia la derecha para avanzar a la siguiente diapositiva
+if slide_index < len(slides) - 1:
+    if st.button(":flecha_a_la_derecha: Siguiente diapositiva"):
+        slide_index += 1
+        st.session_state["slide_index"] = slide_index
+else:
+    if st.button("Reiniciar presentación"):
+        slide_index = 0
+        st.session_state["slide_index"] = slide_index
