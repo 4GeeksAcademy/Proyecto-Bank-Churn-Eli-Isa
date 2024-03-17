@@ -1,34 +1,25 @@
-import streamlit as st
+import os
+import importlib.util
 
-# Lista de diapositivas
-slides = [
-    {"title": "Diapositiva 1", "content": "Contenido de la Diapositiva 1"},
-    {"title": "Diapositiva 2", "content": "Contenido de la Diapositiva 2"},
-    {"title": "Diapositiva 3", "content": "Contenido de la Diapositiva 3"}
-]
+# Obtener la lista de nombres de archivos en la carpeta "pages"
+nombres_archivos = [nombre_archivo[:-3] for nombre_archivo in os.listdir("pages") if nombre_archivo.endswith(".py")]
 
-# Imagen que deseas mostrar en la diapositiva
-imagen_url = "/workspaces/Proyecto-Bank-Churn-Eli-Isa/data/Comparativa balanceos.png"
+# Diccionario para almacenar las funciones de cada página
+paginas = {}
 
-# Índice de la diapositiva actual
-slide_index = st.session_state.get("slide_index", 0)
+# Iterar sobre los nombres de los archivos y cargar los módulos
+for nombre_archivo in nombres_archivos:
+    # Construir la ruta al archivo
+    ruta_archivo = os.path.join("pages", f"{nombre_archivo}.py")
+    
+    # Cargar el módulo utilizando importlib
+    spec = importlib.util.spec_from_file_location(nombre_archivo, ruta_archivo)
+    modulo = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(modulo)
+    
+    # Agregar la función "mostrar" del módulo al diccionario de páginas
+    #paginas[nombre_archivo] = modulo.mostrar
 
-# Mostrar la diapositiva actual
-st.title(slides[slide_index]["title"])
-
-# Mostrar la imagen en la primera diapositiva
-if slide_index == 0:
-    st.image(imagen_url, caption="Descripción de la imagen")
-
-# Mostrar el contenido de la diapositiva
-st.write(slides[slide_index]["content"])
-
-# Botón con flecha hacia la derecha para avanzar a la siguiente diapositiva
-if slide_index < len(slides) - 1:
-    if st.button("➡️ Siguiente diapositiva"):
-        slide_index += 1
-        st.session_state["slide_index"] = slide_index
-else:
-    if st.button("Reiniciar presentación"):
-        slide_index = 0
-        st.session_state["slide_index"] = slide_index
+# Ahora puedes acceder a las funciones de cada página
+# por ejemplo, para mostrar la página "Contexto":
+paginas[nombres_archivos[0]]()
