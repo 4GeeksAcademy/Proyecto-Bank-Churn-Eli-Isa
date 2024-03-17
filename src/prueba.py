@@ -23,6 +23,6 @@ for nombre_archivo in nombres_archivos:
 
 # Ahora puedes acceder a las funciones de cada página
 # por ejemplo, para mostrar la página "Contexto":
-for nombre_pagina, funcion_mostrar in paginas.items():
+for nombre_pagina in nombres_archivos:
     st.title(nombre_pagina.replace("_", " "))  # Reemplazar "_" con espacio para mostrar el título de la página
-    funcion_mostrar()  # Llamar a la función mostrar de la página
+    paginas[nombre_pagina]()  # Llamar a la función mostrar de la página
