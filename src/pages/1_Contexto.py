@@ -5,7 +5,7 @@ def mostrar():
     #st.title("Página de Contexto")
     #st.write("Este es el contenido de la página de contexto.")
 # Mostrar imagen debajo del título
-    imagen_url = "/DATA-SCIENCE-Y-MACHINE-LEARNING.jpg/4209212d84e0d7a26f3b308b9960360a-1.jpg"
+    imagen_url = "DATA-SCIENCE-Y-MACHINE-LEARNING.jpg/4209212d84e0d7a26f3b308b9960360a-1.jpg"
     st.image(imagen_url, caption="PROYECTO FINAL", width=1000, use_column_width="always")
 
 # Espaciado entre los nombres
