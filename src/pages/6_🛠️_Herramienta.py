@@ -56,12 +56,12 @@ data_norm = scaler.transform(data_for_norm)
 data = [[data_norm[0][0], data_norm[0][1], data_norm[0][2], data_norm[0][3],data_norm[0][4]],data_norm[0][5],data_norm[0][6],data_norm[0][7],data_norm[0][8]]
 
 if st.button("Predicción"):
-    prediction = 'BAJA' if round(model.predict(data_norm)[0]) == 0 else 'ALTA' 
+    prediction = 'PERMANENCIA' if round(model.predict(data_norm)[0]) == 0 else 'ABANDONO' 
     
-    st.write("¿El cliente tiene probabilidad de abandono?:", prediction)
+    st.markdown(f"<h1 style='text-align: center;'> {prediction} </h1>", unsafe_allow_html=True)
 
     # Mostrar imagen según la predicción
-    if prediction == 'ALTA':
-        st.image("https://daxg39y63pxwu.cloudfront.net/images/blog/churn-models/Customer_Churn_Prediction_Models_in_Machine_Learning.webp", caption="PROYECTO FINAL")
-    elif prediction == 'BAJA':
-        st.image("https://www.sinch.com/sites/default/files/styles/small/public/image/2022-12/Os%206%20principais%20tipos%20de%20clientes%20e%20como%20lidar%20com%20cada%20um%20deles%20-%20Capa.png.webp?itok=GPuhmK6w", caption="PROYECTO FINAL")
+    if prediction == 'ABANDONO':
+        st.image("https://daxg39y63pxwu.cloudfront.net/images/blog/churn-models/Customer_Churn_Prediction_Models_in_Machine_Learning.webp",use_column_width=True, caption="PROYECTO FINAL")
+    elif prediction == 'PERMANENCIA':
+        st.image("https://www.sinch.com/sites/default/files/styles/small/public/image/2022-12/Os%206%20principais%20tipos%20de%20clientes%20e%20como%20lidar%20com%20cada%20um%20deles%20-%20Capa.png.webp?itok=GPuhmK6w",use_column_width=True, caption="PROYECTO FINAL")
