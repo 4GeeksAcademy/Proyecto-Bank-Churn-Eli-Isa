@@ -60,8 +60,8 @@ if st.button("Predicción"):
     
     st.write("¿El cliente tiene probabilidad de abandono?:", prediction)
 
-# Mostrar imagen según la predicción
-if prediction == 'ALTA':
-    st.image("https://daxg39y63pxwu.cloudfront.net/images/blog/churn-models/Customer_Churn_Prediction_Models_in_Machine_Learning.webp", caption="PROYECTO FINAL")
-elif prediction == 'BAJA':
-    st.image("https://www.sinch.com/sites/default/files/styles/small/public/image/2022-12/Os%206%20principais%20tipos%20de%20clientes%20e%20como%20lidar%20com%20cada%20um%20deles%20-%20Capa.png.webp?itok=GPuhmK6w", caption="PROYECTO FINAL")
+    # Mostrar imagen según la predicción
+    if prediction == 'ALTA':
+        st.image("https://daxg39y63pxwu.cloudfront.net/images/blog/churn-models/Customer_Churn_Prediction_Models_in_Machine_Learning.webp", caption="PROYECTO FINAL")
+    elif prediction == 'BAJA':
+        st.image("https://www.sinch.com/sites/default/files/styles/small/public/image/2022-12/Os%206%20principais%20tipos%20de%20clientes%20e%20como%20lidar%20com%20cada%20um%20deles%20-%20Capa.png.webp?itok=GPuhmK6w", caption="PROYECTO FINAL")
