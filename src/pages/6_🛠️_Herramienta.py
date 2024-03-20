@@ -27,19 +27,15 @@ scaler = joblib.load('scaler_model.joblib')
 
 st.title("Predicción del abandono del cliente")
 
-
 age = st.slider("Edad", min_value = 18.0, max_value = 100.0, step = 1.0)
-prod = st.slider("Num de productos", min_value = 0.0, max_value = 5.0, step = 1.0)
 active = st.selectbox("Miembro activo S/N", options=["Si","No"])
+prod = st.slider("Num de productos", min_value = 0.0, max_value = 5.0, step = 1.0)
 sex = st.selectbox("Sexo", options=["Hombre","Mujer"])
-balance = st.slider("Balance", min_value = 0.0, max_value = 250000.0, step = 10000.0)
 countries = st.selectbox("Pais", options=["Francia","Alemania", "España"])
-
-#Mem-no-products= active*prod
-#Cred-Bal-Sal=cred*balance/sal
+balance = st.slider("Balance", min_value = 0.0, max_value = 250000.0, step = 10000.0)
+tenure = st.slider("Antigüedad", min_value = 0.0, max_value = 10.0, step = 1.0)
 cred= st.slider("Credito score", min_value = 400.0, max_value = 900.0, step = 5.0)
 sal=st.slider("Salario estimado", min_value = 10.0, max_value = 200000.0, step = 2500.0)
-tenure = st.slider("Antigüedad", min_value = 0.0, max_value = 10.0, step = 1.0)
 
 active_n = 0 if active == 'No' else 1
 sex_n= 0 if sex== 'Mujer' else 1
@@ -63,3 +59,9 @@ if st.button("Predicción"):
     prediction = 'BAJA' if round(model.predict(data_norm)[0]) == 0 else 'ALTA' 
     
     st.write("¿El cliente tiene probabilidad de abandono?:", prediction)
+
+# Mostrar imagen según la predicción
+if prediction == 'ALTA':
+    st.image("https://daxg39y63pxwu.cloudfront.net/images/blog/churn-models/Customer_Churn_Prediction_Models_in_Machine_Learning.webp", caption="PROYECTO FINAL")
+elif prediction == 'BAJA':
+    st.image("https://www.sinch.com/sites/default/files/styles/small/public/image/2022-12/Os%206%20principais%20tipos%20de%20clientes%20e%20como%20lidar%20com%20cada%20um%20deles%20-%20Capa.png.webp?itok=GPuhmK6w", caption="PROYECTO FINAL")

@@ -42,7 +42,7 @@ st.markdown("<h2 style='font-size: 24px;'>MEM-NO-PRODUCTS: ISACTIVEMEMBERS ⇄ N
 st.markdown("<br>", unsafe_allow_html=True)
 
 # Mostrar imagen debajo del título
-imagen_url = "C:/Users/elisa/OneDrive/Escritorio/Data Sciencie/Proyecto-Final/Final-Project-Eli-Isa-Bank-Churn/src/DATA-SCIENCE-Y-MACHINE-LEARNING.jpg/Mem-no-products.jpg"
+imagen_url = "DATA-SCIENCE-Y-MACHINE-LEARNING.jpg/Mem-no-products.jpg"
 st.image(imagen_url, width=1000, use_column_width="always")
 
 # Espaciado entre los nombres
@@ -64,7 +64,7 @@ st.markdown("<h2 style='font-size: 24px;'>CRED-BAL-SAL: CREDITSCORE ⇄ BALANCE 
 st.markdown("<br>", unsafe_allow_html=True)
 
 # Mostrar imagen debajo del título
-imagen_url = "C:/Users/elisa/OneDrive/Escritorio/Data Sciencie/Proyecto-Final/Final-Project-Eli-Isa-Bank-Churn/src/DATA-SCIENCE-Y-MACHINE-LEARNING.jpg/Cred-Bal-sal.jpg"
+imagen_url = "DATA-SCIENCE-Y-MACHINE-LEARNING.jpg/Cred-Bal-sal.jpg"
 st.image(imagen_url, width=1000, use_column_width="always")
 
 st.markdown("<br>", unsafe_allow_html=True)
@@ -84,7 +84,7 @@ st.markdown("<h2 style='font-size: 24px;'>BAL-SAL: BALANCE ⇄ SALARY</h2>", uns
 st.markdown("<br>", unsafe_allow_html=True)
 
 # Mostrar imagen debajo del título
-imagen_url = "C:/Users/elisa/OneDrive/Escritorio/Data Sciencie/Proyecto-Final/Final-Project-Eli-Isa-Bank-Churn/src/DATA-SCIENCE-Y-MACHINE-LEARNING.jpg/Bal-sal.jpg"
+imagen_url = "DATA-SCIENCE-Y-MACHINE-LEARNING.jpg/Bal-sal.jpg"
 st.image(imagen_url, width=1000, use_column_width="always")
 
 st.markdown("<br>", unsafe_allow_html=True)
