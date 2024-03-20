@@ -8,7 +8,7 @@ st.set_page_config(
 
 # Título principal centrado
 st.markdown("<h3 style='text-align: center;'>MODELO SELECIONADO: </h3>", unsafe_allow_html=True)
-st.markdown("<h1 style='text-align: center;'>Boosting Algorithms </h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color:#6fa8dc;'>Boosting Algorithms </h1>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center;'>(XGBOOST) </h2>", unsafe_allow_html=True)
 
 # Espaciado entre los nombres

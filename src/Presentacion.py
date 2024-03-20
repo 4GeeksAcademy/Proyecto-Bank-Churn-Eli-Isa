@@ -7,7 +7,7 @@ st.set_page_config(
 )
 
 # Título principal centrado
-st.markdown("<h1 style='text-align: center;'>BANK CHURN PREDICTION </h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;color:#6fa8dc;'>BANK CHURN PREDICTION </h1>", unsafe_allow_html=True)
 
 # Tamaño de texto y alineación centrada
 st.markdown("<h3 style='text-align: center;'>Elisa Castro</h3>", unsafe_allow_html=True)

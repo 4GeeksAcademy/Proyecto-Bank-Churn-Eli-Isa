@@ -6,12 +6,12 @@ st.set_page_config(
 )
 
 # Título principal centrado
-st.markdown("<h1 style='text-align: center;'>VARIABLES COMBINADAS </h1>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center;color:blue;'>VARIABLES COMBINADAS </h2>", unsafe_allow_html=True)
 
 # Tamaño de texto y alineación centrada
 st.markdown("En el dataset se han generado ciertas variables para poder incluir aquellas que no tienen ninguna correlación con la variable objetivo. Las analizamos a continuación.")
 # Descripción de variables
-st.markdown("<h2 style='font-size: 24px;'>TENURE-AGE: TENURE ⇄ AGE</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='font-size: 24px;color:#6fa8dc;'>TENURE-AGE: TENURE ⇄ AGE</h2>", unsafe_allow_html=True)
 
 # Espaciado entre los nombres
 st.markdown("<br>", unsafe_allow_html=True)
@@ -37,7 +37,7 @@ st.markdown("""
 st.markdown("<br>", unsafe_allow_html=True)
 
 # Descripción de variables
-st.markdown("<h2 style='font-size: 24px;'>MEM-NO-PRODUCTS: ISACTIVEMEMBERS ⇄ NUMOFPRODUCTS</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='font-size: 24px;color:#6fa8dc;'>MEM-NO-PRODUCTS: ISACTIVEMEMBERS ⇄ NUMOFPRODUCTS</h2>", unsafe_allow_html=True)
 
 st.markdown("<br>", unsafe_allow_html=True)
 
@@ -59,7 +59,7 @@ st.markdown("""
 st.markdown("<br>", unsafe_allow_html=True)
 
 # Descripción de variables
-st.markdown("<h2 style='font-size: 24px;'>CRED-BAL-SAL: CREDITSCORE ⇄ BALANCE ⇄ SALARY</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='font-size: 24px;color:#6fa8dc;'>CRED-BAL-SAL: CREDITSCORE ⇄ BALANCE ⇄ SALARY</h2>", unsafe_allow_html=True)
 
 st.markdown("<br>", unsafe_allow_html=True)
 
@@ -79,7 +79,7 @@ st.markdown("""
 st.markdown("<br>", unsafe_allow_html=True)
 
 # Descripción de variables
-st.markdown("<h2 style='font-size: 24px;'>BAL-SAL: BALANCE ⇄ SALARY</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='font-size: 24px;color:#6fa8dc;'>BAL-SAL: BALANCE ⇄ SALARY</h2>", unsafe_allow_html=True)
 
 st.markdown("<br>", unsafe_allow_html=True)
 

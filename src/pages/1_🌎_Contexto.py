@@ -7,7 +7,7 @@ st.set_page_config(
 )
 
 # Título principal centrado
-st.markdown("<h1 style='text-align: center;'>CONTEXTO DEL PROYECTO </h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;color:#6fa8dc;'>CONTEXTO DEL PROYECTO </h1>", unsafe_allow_html=True)
 
 # Tamaño de texto y alineación centrada
 st.markdown("""Nuestro proyecto de fin del bootcamp Data Science y Machine Learning de 4Geeks está basado en la **base de datos de un banco**, y pretende **predecir** la **probabilidad** de que un cliente se dé de **baja** o no, de cara a realizar **acciones preventivas de retención** al cliente en caso de probabilidad alta de baja.""", unsafe_allow_html=True)

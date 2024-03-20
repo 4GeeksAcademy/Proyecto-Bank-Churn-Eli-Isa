@@ -6,7 +6,7 @@ st.set_page_config(
 )
 
 # Título principal centrado
-st.markdown("<h1 style='text-align: center;'>ANÁLISIS DE VARIABLES SIGNIFICATIVAS </h1>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center;color:#006400;'>ANÁLISIS DE VARIABLES SIGNIFICATIVAS </h2>", unsafe_allow_html=True)
 
 # Mostrar imagen debajo del título
 imagen_url = "DATA-SCIENCE-Y-MACHINE-LEARNING.jpg/Variables-1.jpg"

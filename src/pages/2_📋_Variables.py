@@ -7,11 +7,11 @@ st.set_page_config(
 )
 
 # Título principal centrado
-st.markdown("<h1 style='text-align: center;'>DESCRIPCION DE VARIABLES </h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;color:#6fa8dc;'>DESCRIPCION DE VARIABLES </h1>", unsafe_allow_html=True)
 
 # Tamaño de texto y alineación centrada
 st.markdown("""
-<h2>Lista de variables</h2>
+<h2 style='color:#006400;'>Lista de variables</h2>
 <ul>
     <li><b>Apellido</b> del cliente</li>
     <li><b>Credit Score</b>: Puntuación de crédito, es una medida de la solvencia crediticia</li>

@@ -11,7 +11,7 @@ st.set_page_config(
 )
 
 # Título principal centrado
-st.markdown("<h1 style='text-align: center;'>HERRAMIENTA DEL MODELO </h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color:#6fa8dc; '>HERRAMIENTA DEL MODELO </h1>", unsafe_allow_html=True)
 
 # Descripción de la aplicación
 st.markdown("""
@@ -19,13 +19,12 @@ Esta aplicación te permite predecir si un cliente tiene probabilidad de abandon
 Simplemente ajusta los valores de las variables a continuación y haz clic en 'Predicción' para ver el resultado.
 """)
 
-# Espaciado entre los nombres
-st.markdown("<br>", unsafe_allow_html=True)
 
 model = load(open("Boosting_65.sav", "rb"))
 scaler = joblib.load('scaler_model.joblib')
 
-st.title("Predicción del abandono del cliente")
+st.markdown("<h2 style='color: #006400;'>Predicción del abandono del cliente</h2>", unsafe_allow_html=True)
+
 
 age = st.slider("Edad", min_value = 18.0, max_value = 100.0, step = 1.0)
 active = st.selectbox("Miembro activo S/N", options=["Si","No"])
